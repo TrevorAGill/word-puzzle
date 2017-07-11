@@ -2,6 +2,7 @@ var vowels = ["a", "e", "i", "o", "u"];
 var sentenceArray = [];
 var currentVowel = "";
 var currentLetter = "";
+var outputString = "";
 
 $(document).ready(function(){
   $("#wordForm").submit(function(event){
@@ -12,8 +13,6 @@ $(document).ready(function(){
       currentLetter = letterArray[index];
       if(currentLetter === "a") {
         currentLetter = "-";
-        
-        alert(currentLetter);
       } else if(currentLetter === "e") {
         currentLetter = "-";
       } else if(currentLetter === "i") {
@@ -23,9 +22,13 @@ $(document).ready(function(){
       } else if(currentLetter === "u") {
         currentLetter = "-";
       } else {
-        currentLetter = currentLetter
+        currentLetter = currentLetter;
       }
+    outputString = outputString + currentLetter;
     }
+    alert(outputString);
+
+
 
 
     // REGEX SOLUTION
